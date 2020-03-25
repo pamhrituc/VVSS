@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: service.ServiceTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0.833 s <<< FAILURE! - in service.ServiceTest
+saveStudent00(service.ServiceTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<5>
+	at service.ServiceTest.saveStudent00(ServiceTest.java:35)
+
+saveStudent01(service.ServiceTest)  Time elapsed: 0.27 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<5>
+	at service.ServiceTest.saveStudent01(ServiceTest.java:47)
+
+saveStudent02(service.ServiceTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<5>
+	at service.ServiceTest.saveStudent02(ServiceTest.java:59)
+
+saveStudent03(service.ServiceTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<5>
+	at service.ServiceTest.saveStudent03(ServiceTest.java:71)
+
+saveStudent04(service.ServiceTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<5>
+	at service.ServiceTest.saveStudent04(ServiceTest.java:83)
+
+saveStudent05(service.ServiceTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<5>
+	at service.ServiceTest.saveStudent05(ServiceTest.java:95)
+
+saveStudent06(service.ServiceTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<2> but was:<5>
+	at service.ServiceTest.saveStudent06(ServiceTest.java:107)
+
+saveStudent07(service.ServiceTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<3> but was:<5>
+	at service.ServiceTest.saveStudent07(ServiceTest.java:119)
+
+saveStudent08(service.ServiceTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: expected:<4> but was:<5>
+	at service.ServiceTest.saveStudent08(ServiceTest.java:131)
+
