@@ -154,4 +154,22 @@ public class ServiceTest {
         }
         Assert.assertEquals(5, i);
     }
+
+    @org.junit.Test
+    public void addAssignment00() {
+        int result = service.saveTema("2", "description", 4, 8);
+        int i = 0;
+        Iterator assignmentsIterator = service.findAllTeme().iterator();
+        while(assignmentsIterator.hasNext()) {
+            i++;
+            assignmentsIterator.next();
+        }
+        System.out.println(i);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment01() {
+        int result = service.saveTema("", "description", 4, 8);
+        Assert.assertEquals(1, result);
+    }
 }

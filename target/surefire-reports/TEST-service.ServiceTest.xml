@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="service.ServiceTest" time="0.833" tests="11" errors="0" skipped="0" failures="9">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="service.ServiceTest" time="0.537" tests="13" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\atom\Software Validation\Lab02-files\VVSSMV\target\test-classes;D:\atom\Software Validation\Lab02-files\VVSSMV\target\classes;C:\Users\spamt\.m2\repository\org\jboss\arquillian\junit\arquillian-junit-core\1.6.0.Final\arquillian-junit-core-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\test\arquillian-test-api\1.6.0.Final\arquillian-test-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\core\arquillian-core-api\1.6.0.Final\arquillian-core-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\test\arquillian-test-spi\1.6.0.Final\arquillian-test-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\core\arquillian-core-spi\1.6.0.Final\arquillian-core-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-test-api\1.6.0.Final\arquillian-container-test-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-api\1.2.6\shrinkwrap-api-1.2.6.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\descriptors\shrinkwrap-descriptors-api-base\2.0.0\shrinkwrap-descriptors-api-base-2.0.0.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-test-spi\1.6.0.Final\arquillian-container-test-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\core\arquillian-core-impl-base\1.6.0.Final\arquillian-core-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\test\arquillian-test-impl-base\1.6.0.Final\arquillian-test-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-impl-base\1.6.0.Final\arquillian-container-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\config\arquillian-config-api\1.6.0.Final\arquillian-config-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\config\arquillian-config-impl-base\1.6.0.Final\arquillian-config-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\config\arquillian-config-spi\1.6.0.Final\arquillian-config-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\descriptors\shrinkwrap-descriptors-spi\2.0.0\shrinkwrap-descriptors-spi-2.0.0.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-test-impl-base\1.6.0.Final\arquillian-container-test-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-impl-base\1.2.6\shrinkwrap-impl-base-1.2.6.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-spi\1.2.6\shrinkwrap-spi-1.2.6.jar;C:\Users\spamt\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\spamt\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\spamt\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-weld-ee-embedded-1.1\1.0.0.Final\arquillian-weld-ee-embedded-1.1-1.0.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-spi\1.1.4.Final\arquillian-container-spi-1.1.4.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\testenricher\arquillian-testenricher-cdi\1.1.4.Final\arquillian-testenricher-cdi-1.1.4.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core\3.0.0.Alpha6\weld-core-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\javax\enterprise\cdi-api\1.2\cdi-api-1.2.jar;C:\Users\spamt\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-api\3.0.Alpha5\weld-api-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-spi\3.0.Alpha5\weld-spi-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\classfilewriter\jboss-classfilewriter\1.0.5.Final\jboss-classfilewriter-1.0.5.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.2_spec\1.0.0.Alpha1\jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\el\jboss-el-api_3.0_spec\1.0.0.Alpha1\jboss-el-api_3.0_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\interceptor\jboss-interceptors-api_1.2_spec\1.0.0.Alpha3\jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar;C:\Users\spamt\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\module\weld-jsf\3.0.0.Alpha6\weld-jsf-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core-impl\3.0.0.Alpha6\weld-core-impl-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-simple\2.0.0-alpha1\slf4j-simple-2.0.0-alpha1.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-api\2.0.0-alpha1\slf4j-api-2.0.0-alpha1.jar;"/>
+    <property name="java.class.path" value="D:\atom\Software Validation\Lab02-files\VVSSMV\target\test-classes;D:\atom\Software Validation\Lab02-files\VVSSMV\target\classes;C:\Users\spamt\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\spamt\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\spamt\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core\3.0.0.Alpha6\weld-core-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\javax\enterprise\cdi-api\1.2\cdi-api-1.2.jar;C:\Users\spamt\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-api\3.0.Alpha5\weld-api-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-spi\3.0.Alpha5\weld-spi-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\classfilewriter\jboss-classfilewriter\1.0.5.Final\jboss-classfilewriter-1.0.5.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.2_spec\1.0.0.Alpha1\jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\el\jboss-el-api_3.0_spec\1.0.0.Alpha1\jboss-el-api_3.0_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\interceptor\jboss-interceptors-api_1.2_spec\1.0.0.Alpha3\jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar;C:\Users\spamt\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\module\weld-jsf\3.0.0.Alpha6\weld-jsf-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core-impl\3.0.0.Alpha6\weld-core-impl-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-simple\2.0.0-alpha1\slf4j-simple-2.0.0-alpha1.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-api\2.0.0-alpha1\slf4j-api-2.0.0-alpha1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\spamt\AppData\Local\Temp\surefire10759702526244470316\surefirebooter3421725367287186789.jar C:\Users\spamt\AppData\Local\Temp\surefire10759702526244470316 2020-03-25T09-37-08_746-jvmRun1 surefire15212116505127330839tmp surefire_0417497920454785961tmp"/>
+    <property name="sun.java.command" value="C:\Users\spamt\AppData\Local\Temp\surefire6691477598618441625\surefirebooter7633080306508076430.jar C:\Users\spamt\AppData\Local\Temp\surefire6691477598618441625 2020-03-25T09-57-40_314-jvmRun1 surefire13833647905174001534tmp surefire_016182469040640126966tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\atom\Software Validation\Lab02-files\VVSSMV\target\test-classes;D:\atom\Software Validation\Lab02-files\VVSSMV\target\classes;C:\Users\spamt\.m2\repository\org\jboss\arquillian\junit\arquillian-junit-core\1.6.0.Final\arquillian-junit-core-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\test\arquillian-test-api\1.6.0.Final\arquillian-test-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\core\arquillian-core-api\1.6.0.Final\arquillian-core-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\test\arquillian-test-spi\1.6.0.Final\arquillian-test-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\core\arquillian-core-spi\1.6.0.Final\arquillian-core-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-test-api\1.6.0.Final\arquillian-container-test-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-api\1.2.6\shrinkwrap-api-1.2.6.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\descriptors\shrinkwrap-descriptors-api-base\2.0.0\shrinkwrap-descriptors-api-base-2.0.0.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-test-spi\1.6.0.Final\arquillian-container-test-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\core\arquillian-core-impl-base\1.6.0.Final\arquillian-core-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\test\arquillian-test-impl-base\1.6.0.Final\arquillian-test-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-impl-base\1.6.0.Final\arquillian-container-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\config\arquillian-config-api\1.6.0.Final\arquillian-config-api-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\config\arquillian-config-impl-base\1.6.0.Final\arquillian-config-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\config\arquillian-config-spi\1.6.0.Final\arquillian-config-spi-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\descriptors\shrinkwrap-descriptors-spi\2.0.0\shrinkwrap-descriptors-spi-2.0.0.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-test-impl-base\1.6.0.Final\arquillian-container-test-impl-base-1.6.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-impl-base\1.2.6\shrinkwrap-impl-base-1.2.6.jar;C:\Users\spamt\.m2\repository\org\jboss\shrinkwrap\shrinkwrap-spi\1.2.6\shrinkwrap-spi-1.2.6.jar;C:\Users\spamt\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\spamt\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\spamt\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-weld-ee-embedded-1.1\1.0.0.Final\arquillian-weld-ee-embedded-1.1-1.0.0.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\container\arquillian-container-spi\1.1.4.Final\arquillian-container-spi-1.1.4.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\arquillian\testenricher\arquillian-testenricher-cdi\1.1.4.Final\arquillian-testenricher-cdi-1.1.4.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core\3.0.0.Alpha6\weld-core-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\javax\enterprise\cdi-api\1.2\cdi-api-1.2.jar;C:\Users\spamt\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-api\3.0.Alpha5\weld-api-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-spi\3.0.Alpha5\weld-spi-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\classfilewriter\jboss-classfilewriter\1.0.5.Final\jboss-classfilewriter-1.0.5.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.2_spec\1.0.0.Alpha1\jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\el\jboss-el-api_3.0_spec\1.0.0.Alpha1\jboss-el-api_3.0_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\interceptor\jboss-interceptors-api_1.2_spec\1.0.0.Alpha3\jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar;C:\Users\spamt\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\module\weld-jsf\3.0.0.Alpha6\weld-jsf-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core-impl\3.0.0.Alpha6\weld-core-impl-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-simple\2.0.0-alpha1\slf4j-simple-2.0.0-alpha1.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-api\2.0.0-alpha1\slf4j-api-2.0.0-alpha1.jar;"/>
+    <property name="surefire.test.class.path" value="D:\atom\Software Validation\Lab02-files\VVSSMV\target\test-classes;D:\atom\Software Validation\Lab02-files\VVSSMV\target\classes;C:\Users\spamt\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\spamt\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\spamt\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core\3.0.0.Alpha6\weld-core-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\javax\enterprise\cdi-api\1.2\cdi-api-1.2.jar;C:\Users\spamt\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-api\3.0.Alpha5\weld-api-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-spi\3.0.Alpha5\weld-spi-3.0.Alpha5.jar;C:\Users\spamt\.m2\repository\org\jboss\classfilewriter\jboss-classfilewriter\1.0.5.Final\jboss-classfilewriter-1.0.5.Final.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.2_spec\1.0.0.Alpha1\jboss-annotations-api_1.2_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\el\jboss-el-api_3.0_spec\1.0.0.Alpha1\jboss-el-api_3.0_spec-1.0.0.Alpha1.jar;C:\Users\spamt\.m2\repository\org\jboss\spec\javax\interceptor\jboss-interceptors-api_1.2_spec\1.0.0.Alpha3\jboss-interceptors-api_1.2_spec-1.0.0.Alpha3.jar;C:\Users\spamt\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\module\weld-jsf\3.0.0.Alpha6\weld-jsf-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\jboss\weld\weld-core-impl\3.0.0.Alpha6\weld-core-impl-3.0.0.Alpha6.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-simple\2.0.0-alpha1\slf4j-simple-2.0.0-alpha1.jar;C:\Users\spamt\.m2\repository\org\slf4j\slf4j-api\2.0.0-alpha1\slf4j-api-2.0.0-alpha1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\spamt"/>
     <property name="user.language" value="en"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\spamt\AppData\Local\Temp\surefire10759702526244470316\surefirebooter3421725367287186789.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\spamt\AppData\Local\Temp\surefire6691477598618441625\surefirebooter7633080306508076430.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.2+9-LTS"/>
@@ -61,66 +61,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="saveStudent00" classname="service.ServiceTest" time="0.01">
-    <failure message="expected:&lt;1&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<5>
-	at service.ServiceTest.saveStudent00(ServiceTest.java:35)
-]]></failure>
-  </testcase>
-  <testcase name="saveStudent01" classname="service.ServiceTest" time="0.27">
-    <failure message="expected:&lt;1&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<5>
-	at service.ServiceTest.saveStudent01(ServiceTest.java:47)
-]]></failure>
-    <system-out><![CDATA[Entitatea nu este valida! 
-
-]]></system-out>
-  </testcase>
-  <testcase name="saveStudent02" classname="service.ServiceTest" time="0.033">
-    <failure message="expected:&lt;1&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<5>
-	at service.ServiceTest.saveStudent02(ServiceTest.java:59)
-]]></failure>
-    <system-out><![CDATA[Entitatea nu este valida! 
-
-]]></system-out>
-  </testcase>
-  <testcase name="saveStudent03" classname="service.ServiceTest" time="0.015">
-    <failure message="expected:&lt;1&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<5>
-	at service.ServiceTest.saveStudent03(ServiceTest.java:71)
-]]></failure>
-    <system-out><![CDATA[Entitatea nu este valida! 
-
-]]></system-out>
-  </testcase>
-  <testcase name="saveStudent04" classname="service.ServiceTest" time="0.016">
-    <failure message="expected:&lt;1&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<5>
-	at service.ServiceTest.saveStudent04(ServiceTest.java:83)
-]]></failure>
-    <system-out><![CDATA[Entitatea nu este valida! 
-
-]]></system-out>
-  </testcase>
-  <testcase name="saveStudent05" classname="service.ServiceTest" time="0.011">
-    <failure message="expected:&lt;1&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<1> but was:<5>
-	at service.ServiceTest.saveStudent05(ServiceTest.java:95)
-]]></failure>
-    <system-out><![CDATA[Entitatea nu este valida! 
-
-]]></system-out>
-  </testcase>
-  <testcase name="saveStudent06" classname="service.ServiceTest" time="0.001">
-    <failure message="expected:&lt;2&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<2> but was:<5>
-	at service.ServiceTest.saveStudent06(ServiceTest.java:107)
-]]></failure>
-  </testcase>
-  <testcase name="saveStudent07" classname="service.ServiceTest" time="0">
-    <failure message="expected:&lt;3&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<3> but was:<5>
-	at service.ServiceTest.saveStudent07(ServiceTest.java:119)
-]]></failure>
-  </testcase>
-  <testcase name="saveStudent08" classname="service.ServiceTest" time="0.011">
-    <failure message="expected:&lt;4&gt; but was:&lt;5&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<4> but was:<5>
-	at service.ServiceTest.saveStudent08(ServiceTest.java:131)
-]]></failure>
-  </testcase>
-  <testcase name="saveStudent09" classname="service.ServiceTest" time="0"/>
-  <testcase name="saveStudent10" classname="service.ServiceTest" time="0.022"/>
+  <testcase name="addAssignment00" classname="service.ServiceTest" time="0.17"/>
+  <testcase name="addAssignment01" classname="service.ServiceTest" time="0.009"/>
+  <testcase name="saveStudent00" classname="service.ServiceTest" time="0.006"/>
+  <testcase name="saveStudent01" classname="service.ServiceTest" time="0.004"/>
+  <testcase name="saveStudent02" classname="service.ServiceTest" time="0.004"/>
+  <testcase name="saveStudent03" classname="service.ServiceTest" time="0.003"/>
+  <testcase name="saveStudent04" classname="service.ServiceTest" time="0.006"/>
+  <testcase name="saveStudent05" classname="service.ServiceTest" time="0.003"/>
+  <testcase name="saveStudent06" classname="service.ServiceTest" time="0.003"/>
+  <testcase name="saveStudent07" classname="service.ServiceTest" time="0.004"/>
+  <testcase name="saveStudent08" classname="service.ServiceTest" time="0.003"/>
+  <testcase name="saveStudent09" classname="service.ServiceTest" time="0.004"/>
+  <testcase name="saveStudent10" classname="service.ServiceTest" time="0.006"/>
 </testsuite>
