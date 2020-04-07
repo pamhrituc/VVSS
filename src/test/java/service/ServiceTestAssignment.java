@@ -28,22 +28,50 @@ public class ServiceTestAssignment {
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-    //White Box testing for addAssignment (saveTema method from the Service class
+    //White Box testing for addAssignment (saveTema) method from the Service class
     @org.junit.Test
     public void addAssignment00() {
-        int result = service.saveTema("2", "description", 4, 8);
-        int i = 0;
-        Iterator assignmentsIterator = service.findAllTeme().iterator();
-        while(assignmentsIterator.hasNext()) {
-            i++;
-            assignmentsIterator.next();
-        }
-        System.out.println(i);
+        int result = service.saveTema("0", "description", 4, 8);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment01() {
-        int result = service.saveTema("", "description", 4, 8);
+        int result = service.saveTema("", "description", 8, 4);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment02() {
+        int result = service.saveTema(null, "description", 8, 4);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment03() {
+        int result = service.saveTema("1", "", 8, 4);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment04() {
+        int result = service.saveTema("1", null, 8, 4);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment05() {
+        int result = service.saveTema("1", "description", 0, 4);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment06() {
+        int result = service.saveTema("1", "description", 15, 4);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment07() {
+        int result = service.saveTema("1", "description", 3, 0);
+        Assert.assertEquals(1, result);
+    }
+    @org.junit.Test
+    public void addAssignment08() {
+        int result = service.saveTema("1", "description", 3, 15);
         Assert.assertEquals(1, result);
     }
 }
