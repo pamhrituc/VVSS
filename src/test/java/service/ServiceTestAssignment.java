@@ -41,46 +41,55 @@ public class ServiceTestAssignment {
     //White Box testing for addAssignment (saveTema) method from the Service class
     @org.junit.Test
     public void addAssignment00() {
+        deleteAll();
         int result = service.saveTema("0", "description", 4, 8);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment01() {
+        deleteAll();
         int result = service.saveTema("", "description", 8, 4);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment02() {
+        deleteAll();
         int result = service.saveTema(null, "description", 8, 4);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment03() {
+        deleteAll();
         int result = service.saveTema("1", "", 8, 4);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment04() {
+        deleteAll();
         int result = service.saveTema("1", null, 8, 4);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment05() {
+        deleteAll();
         int result = service.saveTema("1", "description", 0, 4);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment06() {
+        deleteAll();
         int result = service.saveTema("1", "description", 15, 4);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment07() {
+        deleteAll();
         int result = service.saveTema("1", "description", 3, 0);
         Assert.assertEquals(1, result);
     }
     @org.junit.Test
     public void addAssignment08() {
+        deleteAll();
         int result = service.saveTema("1", "description", 3, 15);
         Assert.assertEquals(1, result);
     }
