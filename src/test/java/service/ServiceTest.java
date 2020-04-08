@@ -1,13 +1,13 @@
 package service;
 
 import domain.*;
-import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
 import repository.*;
 import org.junit.Assert;
 import validation.*;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ServiceTest {
@@ -21,6 +21,17 @@ public class ServiceTest {
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
+    @org.junit.Test
+    public void deleteAll()
+    {
+        ArrayList<String> ids = new ArrayList();
+        //Iterator studentsIterator = service.findAllStudents().iterator();
+        service.findAllStudents().forEach(student -> ids.add(student.getID()));
+        for (int i = 0; i < ids.size(); i++) {
+            service.deleteStudent(ids.get(i));
+        }
+
+    }
     //Black Box testing for saveStudent (addStudent)
     @org.junit.Test
     public void saveStudent00() {
