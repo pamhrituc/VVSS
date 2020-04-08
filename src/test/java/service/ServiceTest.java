@@ -9,7 +9,7 @@ import validation.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ServiceTest {
     Validator<Student> studentValidator = new StudentValidator();
     Validator<Tema> temaValidator = new TemaValidator();
@@ -24,7 +24,6 @@ public class ServiceTest {
     public void deleteAll()
     {
         ArrayList<String> ids = new ArrayList();
-        //Iterator studentsIterator = service.findAllStudents().iterator();
         service.findAllStudents().forEach(student -> ids.add(student.getID()));
         for (int i = 0; i < ids.size(); i++) {
             service.deleteStudent(ids.get(i));
@@ -46,7 +45,7 @@ public class ServiceTest {
     }
     @org.junit.Test
     public void saveStudent01() {
-
+        deleteAll();
         service.saveStudent("", "Mary", 922);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -54,11 +53,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(1, i);
+        Assert.assertEquals(0, i);
     }
     @org.junit.Test
     public void saveStudent02() {
-
+        deleteAll();
         service.saveStudent(null, "Mary", 922);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -66,11 +65,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(1, i);
+        Assert.assertEquals(0, i);
     }
     @org.junit.Test
     public void saveStudent03() {
-
+        deleteAll();
         service.saveStudent("2", "", 922);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -78,11 +77,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(1, i);
+        Assert.assertEquals(0, i);
     }
     @org.junit.Test
     public void saveStudent04() {
-
+        deleteAll();
         service.saveStudent("3", null, 922);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -90,11 +89,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(1, i);
+        Assert.assertEquals(0, i);
     }
     @org.junit.Test
     public void saveStudent05() {
-
+        deleteAll();
         service.saveStudent("4", "Mary", 109);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -102,11 +101,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(1, i);
+        Assert.assertEquals(0, i);
     }
     @org.junit.Test
     public void saveStudent06() {
-        //Test fails cause apparently it doesn't take the boundary into consideration properly
+        deleteAll();
         service.saveStudent("5", "Mary", 110);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -114,11 +113,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(2, i);
+        Assert.assertEquals(1, i);
     }
     @org.junit.Test
     public void saveStudent07() {
-
+        deleteAll();
         service.saveStudent("6", "Mary", 111);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -126,11 +125,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(3, i);
+        Assert.assertEquals(1, i);
     }
     @org.junit.Test
     public void saveStudent08() {
-
+        deleteAll();
         service.saveStudent("7", "Mary", 937);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -138,11 +137,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(4, i);
+        Assert.assertEquals(1, i);
     }
     @org.junit.Test
     public void saveStudent09() {
-
+        deleteAll();
         service.saveStudent("8", "Mary", 938);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -150,11 +149,11 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(5, i);
+        Assert.assertEquals(1, i);
     }
     @org.junit.Test
     public void saveStudent10() {
-
+        deleteAll();
         service.saveStudent("9", "Mary", 939);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
@@ -162,6 +161,6 @@ public class ServiceTest {
             i++;
             studentsIterator.next();
         }
-        Assert.assertEquals(5, i);
+        Assert.assertEquals(0, i);
     }
 }
