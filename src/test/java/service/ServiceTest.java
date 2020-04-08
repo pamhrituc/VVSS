@@ -21,7 +21,6 @@ public class ServiceTest {
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
-    @org.junit.Test
     public void deleteAll()
     {
         ArrayList<String> ids = new ArrayList();
@@ -35,7 +34,7 @@ public class ServiceTest {
     //Black Box testing for saveStudent (addStudent)
     @org.junit.Test
     public void saveStudent00() {
-
+        deleteAll();
         service.saveStudent("1", "Johnny", 923);
         int i = 0;
         Iterator studentsIterator = service.findAllStudents().iterator();
