@@ -12,6 +12,7 @@ import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.Validator;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ServiceTestGrade {
@@ -24,8 +25,27 @@ public class ServiceTestGrade {
     NotaXMLRepository fileRepository3 = new NotaXMLRepository(notaValidator, "note.xml");
 
     Service service = new Service(fileRepository1, fileRepository2, fileRepository3);
+
+    public void deleteAllA()
+    {
+        ArrayList<String> ida = new ArrayList();
+        service.findAllTeme().forEach(tema -> ida.add(tema.getID()));
+        for (int i = 0; i < ida.size(); i++) {
+            service.deleteTema(ida.get(i));
+        }
+    }
+    public void deleteAllS() {
+        ArrayList<String> ids = new ArrayList();
+        service.findAllStudents().forEach(student -> ids.add(student.getID()));
+        for (int i = 0; i < ids.size(); i++) {
+            service.deleteStudent(ids.get(i));
+        }
+    }
+
+    //used black box testing
     @org.junit.Test
     public void addAssignment1() {
+        deleteAllA();
         service.saveTema("10", "description", 12, 8);
         int i = 0;
         Iterator assignmentsIterator = service.findAllStudents().iterator();
@@ -37,7 +57,8 @@ public class ServiceTestGrade {
     }
     @org.junit.Test
     public void saveStudent1() {
-        service.saveStudent("5", "Steve", 923);
+        deleteAllS();
+        service.saveStudent("10", "Steve", 923);
         int i = 0;
         Iterator studentsIterator = service.findAllTeme().iterator();
         while(studentsIterator.hasNext()) {
