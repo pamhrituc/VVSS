@@ -4,7 +4,6 @@ import domain.Nota;
 import domain.Student;
 import domain.Tema;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
 import repository.NotaXMLRepository;
@@ -16,6 +15,7 @@ import validation.TemaValidator;
 import validation.Validator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ServiceTestAssignment {
@@ -96,7 +96,7 @@ public class ServiceTestAssignment {
     @org.junit.Test
     public void addAssignment09() {
         deleteAll();
-        int result = service.saveTema("id", "description", 8, 2);
+        int result = service.saveTema("id", "description", 8, 4);
         Assert.assertEquals(0, result);
     }
 }

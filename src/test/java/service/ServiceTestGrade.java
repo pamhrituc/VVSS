@@ -1,6 +1,7 @@
 package service;
 
 import domain.Nota;
+import domain.Pair;
 import domain.Student;
 import domain.Tema;
 import org.junit.Assert;
@@ -29,7 +30,7 @@ public class ServiceTestGrade {
     public void deleteAllA()
     {
         ArrayList<String> ida = new ArrayList();
-        service.findAllTeme().forEach(tema -> ida.add(tema.getID()));
+        service.findAllTeme().forEach(assignment -> ida.add(assignment.getID()));
         for (int i = 0; i < ida.size(); i++) {
             service.deleteTema(ida.get(i));
         }
@@ -42,25 +43,37 @@ public class ServiceTestGrade {
         }
     }
 
+    public void deleteAllG()
+    {
+        ArrayList<Pair<String, String>> idg = new ArrayList();
+        service.findAllNote().forEach(grade -> idg.add(grade.getID()));
+        for (int i = 0; i < idg.size(); i++)
+        {
+            service.deleteNota(idg.get(i));
+        }
+    }
+
     //used black box testing
     @org.junit.Test
     public void addAssignment1() {
         deleteAllA();
+
         service.saveTema("10", "description", 12, 8);
         int i = 0;
-        Iterator assignmentsIterator = service.findAllStudents().iterator();
+        Iterator assignmentsIterator = service.findAllTeme().iterator();
         while(assignmentsIterator.hasNext()) {
             i++;
             assignmentsIterator.next();
         }
         Assert.assertEquals(1, i);
     }
+
     @org.junit.Test
     public void saveStudent1() {
         deleteAllS();
         service.saveStudent("10", "Steve", 923);
         int i = 0;
-        Iterator studentsIterator = service.findAllTeme().iterator();
+        Iterator studentsIterator = service.findAllStudents().iterator();
         while(studentsIterator.hasNext()) {
             i++;
             studentsIterator.next();
@@ -70,7 +83,8 @@ public class ServiceTestGrade {
     @org.junit.Test
     public void addGrade1()
     {
-        service.saveNota("5", "10", 9, 12, "yeet");
+        deleteAllG();
+        service.saveNota("10", "10", 9, 12, "yeet");
         int i = 0;
         Iterator gradesIterator = service.findAllNote().iterator();
         while(gradesIterator.hasNext()) {
@@ -87,4 +101,49 @@ public class ServiceTestGrade {
         addGrade1();
     }
 
+    @org.junit.Test
+    public void addStudent2()
+    {
+        deleteAllS();
+        service.saveStudent("7", "Jack", 923);
+        int i = 0;
+        Iterator studentsIterator = service.findAllStudents().iterator();
+        while(studentsIterator.hasNext()) {
+            i++;
+            studentsIterator.next();
+        }
+        Assert.assertEquals(1, i);
+    }
+
+    @org.junit.Test
+    public void addAssignment2()
+    {
+        addStudent2();
+        deleteAllA();
+
+        service.saveTema("7", "An assignment", 10, 8);
+        int i = 0;
+        Iterator assignmentsIterator = service.findAllTeme().iterator();
+        while(assignmentsIterator.hasNext()) {
+            i++;
+            assignmentsIterator.next();
+        }
+        Assert.assertEquals(1, i);
+    }
+
+    @org.junit.Test
+    public void addGrade2()
+    {
+        addStudent2();
+        addAssignment2();
+        deleteAllG();
+        service.saveNota("7", "7", 9, 12, "yoink");
+        int i = 0;
+        Iterator gradesIterator = service.findAllNote().iterator();
+        while(gradesIterator.hasNext()) {
+            i++;
+            gradesIterator.next();
+        }
+        Assert.assertEquals(1, i);
+    }
 }
